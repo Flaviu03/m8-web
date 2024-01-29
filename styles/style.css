@@ -1,0 +1,58 @@
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    transition: font-size 2s;
+    opacity: 0;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+    color: white;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; font-size: 20px; }
+    100% { opacity: 1; font-size: 50px; }
+}    
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(36, 35, 35);
+    font-family: 'Roboto', sans-serif;    
+}
+
+header {
+    position: relative;
+    background-color: #fff;
+}
+
+.rainbow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #33cc33, #3399ff, #9933cc, #ff33cc);
+    animation: fillHeader 2s linear forwards;
+}
+
+@keyframes fillHeader {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.363);
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+}
